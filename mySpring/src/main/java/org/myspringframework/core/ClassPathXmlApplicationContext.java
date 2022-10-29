@@ -5,6 +5,8 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -17,6 +19,7 @@ import java.util.Map;
  */
 public class ClassPathXmlApplicationContext implements ApplicationContext{
 
+    private static Logger logger = LoggerFactory.getLogger(ClassPathXmlApplicationContext.class);
 
     private Map<String,Object> singletonObejcts = new HashMap<>();
 
@@ -42,8 +45,10 @@ public class ClassPathXmlApplicationContext implements ApplicationContext{
                 Element element = (Element) node;
                 //获取id属性
                 String id = element.attributeValue("id");
+                logger.info("id为：{}",id);
                 //获取class属性
                 String className = element.attributeValue("class");
+                logger.info("className：{}",className);
             });
         } catch (DocumentException e) {
             e.printStackTrace();
