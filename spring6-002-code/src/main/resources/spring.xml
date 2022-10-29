@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--这就是spring的配置文件-->
+    <!--Idea工具提供了文件的模板-->
+    <bean id="user" class="com.lck.spring6.bean.User"></bean>
+<!--    <bean id="user1" class="com.lck.spring6.bean.User"></bean>-->
+
+    <bean id="userDao" class="com.lck.spring6.dao.impl.UserDaoImpl"></bean>
+    <bean id="nowTime" class="java.util.Date"></bean>
+</beans>

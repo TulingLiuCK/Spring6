@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--这个配置我呢见也是使用myspring框架的开发人员提供的-->
+<beans>
+    <bean id = "" class = "com.lck.myspring.bean.User">
+        <property name="name" value="张三"></property>
+        <property name="age" value="19"/>
+     </bean>
+
+    <bean id="userDao" class="com.lck.myspring.bean.UserDao"></bean>
+
+    <bean id="userService" class="com.lck.myspring.bean.UserService">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>

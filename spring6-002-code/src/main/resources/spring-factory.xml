@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    &lt;!&ndash;通过简单工厂模式，创建bean的实力,通过get方法获取Bean&ndash;&gt;-->
+<!--    <bean id="star" class="com.lck.spring6.bean.StarFactory" factory-method="get"/>-->
+
+<!--    &lt;!&ndash;通过工厂方法模式，通过factory-bean属性+factory-method 属性来共同完成&ndash;&gt;-->
+<!--    <bean id="gunFactory" class="com.lck.spring6.facotry.GunFactory"/>-->
+<!--    <bean id="gun" factory-bean="gunFactory" factory-method="get" />-->
+
+    <bean id="person" class="com.lck.spring6.facotry.PersonFactoryBean"></bean>
+
+    <!--配置bean后置处理器-->
+    <bean class="com.lck.spring6.process.LogBeanPostProcessor"/>
+
+</beans>
